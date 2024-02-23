@@ -50,7 +50,6 @@ def fetch_sales_data(sales_data_file_name):
     """Reads sales data from a CSV file and returns a dataframe."""
     try:
         sales_df = pd.read_csv(sales_data_file_name)
-        sales_df = sales_df.head(20)
         logger.info("sales data fetched successfully")
         return sales_df
     except FileNotFoundError as e:
