@@ -1,0 +1,6 @@
+pandas
+matplotlib
+sqlalchemy
+requests
+pyyaml
+pytest

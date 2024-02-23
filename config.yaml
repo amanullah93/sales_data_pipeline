@@ -1,0 +1,7 @@
+USER_API_URL : "https://jsonplaceholder.typicode.com/users"
+SALES_DATA_FILE_NAME : "input_data/AIQ - Data Engineer Assignment - Sales data.csv"
+SALES_MERGE_KEY : "customer_id"
+
+OPEN_WEATHER_API_URL : "https://api.openweathermap.org/data/2.5/weather?"
+OPEN_WEATHER_API_KEY : "ab1a190f731c0466744dc8e0c9109346"
+ORDER_MERGE_KEY : "order_id"
