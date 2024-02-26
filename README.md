@@ -11,7 +11,7 @@ This Python script demonstrates a data transformation and analysis pipeline for 
 1. Python 3.x installed.
 2. Required Python packages installed: `pandas`, `requests`, `matplotlib`, `sqlalchemy`, `pyyaml`, `pytest`.
    ```bash
-   pip install pandas requests matplotlib sqlalchemy pyyaml
+   pip install pandas requests matplotlib sqlalchemy pyyaml pytest
 3. Replace 'OPEN_WEATHER_API_KEY' in the script with your actual OpenWeatherMap API key.
 4. Run the script:
    ```bash
