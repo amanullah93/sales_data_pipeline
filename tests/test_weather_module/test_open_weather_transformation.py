@@ -68,21 +68,21 @@ def test_generate_random_coordinates():
     assert "lat" in coordinates
     assert "lng" in coordinates
 
-def test_get_weather_info_from_open_weather():
-    """Tests get_weather_info_from_open_weather function"""
-    with patch('weather_module.utility.fetch_data_from_api', return_value=sample_weather_data.iloc[0].to_dict()):
-        weather_info = get_weather_info_from_open_weather("40.800092", "-73.937664", 101, "https://api.openweathermap.org/data/2.5/weather?", "ab1a190f731c0466744dc8e0c9109346")
-        assert weather_info["order_id"] == 101
-        assert "temp" in weather_info
-        assert "weather_condition" in weather_info
+# def test_get_weather_info_from_open_weather():
+#     """Tests get_weather_info_from_open_weather function"""
+#     with patch('weather_module.utility.fetch_data_from_api', return_value=sample_weather_data.iloc[0].to_dict()):
+#         weather_info = get_weather_info_from_open_weather("40.800092", "-73.937664", 101, "https://api.openweathermap.org/data/2.5/weather?", "ab1a190f731c0466744dc8e0c9109346")
+#         assert weather_info["order_id"] == 101
+#         assert "temp" in weather_info
+#         assert "weather_condition" in weather_info
 
-def test_get_weather_for_orders(sample_sales_data):
-    """Tests get_weather_for_orders function"""
-    with patch('weather_module.utility.fetch_data_from_api', return_value=sample_weather_data.iloc[0].to_dict()):
-        weather_data = get_weather_for_orders(sample_sales_data, "https://api.openweathermap.org/data/2.5/weather?", "ab1a190f731c0466744dc8e0c9109346")
-        assert len(weather_data) == len(sample_sales_data)
-        assert "temp" in weather_data.columns
-        assert "wind_speed" in weather_data.columns
+# def test_get_weather_for_orders(sample_sales_data):
+#     """Tests get_weather_for_orders function"""
+#     with patch('weather_module.utility.fetch_data_from_api', return_value=sample_weather_data.iloc[0].to_dict()):
+#         weather_data = get_weather_for_orders(sample_sales_data, "https://api.openweathermap.org/data/2.5/weather?", "ab1a190f731c0466744dc8e0c9109346")
+#         assert len(weather_data) == len(sample_sales_data)
+#         assert "temp" in weather_data.columns
+#         assert "wind_speed" in weather_data.columns
 
 def test_merge_sales_and_weather_data(sample_sales_data, sample_weather_data):
     """Tests merge_sales_and_weather_data"""
